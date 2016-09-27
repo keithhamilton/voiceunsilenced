@@ -58,12 +58,23 @@ simple service that allows people to host web applications cheaply.
 ###2. Deploy this to Heroku
 
 #####A note on cost
-The `master` branch of this program will deploy VoiceUnsilenced on Heroku's
-Hobby plan, which will cost about $20/month. This default was chosen so the bot
-would never go to sleep. If you would like to deploy this on Heroku's Free tier,
-switch to the [free-heroku](https://github.com/keithhamilton/voiceunsilenced/tree/free-heroku) branch and follow the deploy instructions there.
+The `free-heroku` branch will deploy the VoiceUnsilenced bot to Herkou on a free
+plan, but in order to do so, you will need to deploy two projects (Heroku has a
+limitation on the number of free resources per project).
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+If you'd rather deploy in a single, more performant Heroku setup, head over to
+the [master branch](https://github.com/keithhamilton/voiceunsilenced/tree/master).
+
+First, you'll want to deploy the web portion:
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/keithhamilton/voiceunsilenced/tree/free-heroku-web)
+
+Take note of the name you use for the app. You will need that when you deploy
+the bot. Once you've got it, deploy the bot, using the name of the web app for
+the `BOT_APP_NAME` environment variable:
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/keithhamilton/voiceunsilenced/tree/free-heroku-bot)
+
 
 
 ###3. Update the configuration values
@@ -135,15 +146,15 @@ messaging, MMS, and more. If you want to learn more about it, hop over to the
 #####How much does it cost to run this bot?
 That depends on a few things:
 
-1. **Heroku.** The way this is set up, your bot will be deployed under a Hobby setup
-   plan in Heroku. Because of the drawbacks of a Free setup, namely that it will
-   go to sleep during long periods of inactivity, we've used Hobby as the
-   default, which will cost about $20 a month.
+1. **Heroku.** The way this is set up, your bot will be deployed under a free setup
+   plan in Heroku. There is a drawback to this, however, in that the bot
+   components will "sleep" after periods of inactivity. This only means that
+   there will be a lag from time-to-time if your bot isn't seeing high traffic. 
    
-   If you would like to deploy VoiceUnsilenced on Heroku's free plan, you can
+   If you would like to deploy VoiceUnsilenced on Heroku's Hobby plan, you can
    switch to the
-   [free-heroku](https://github.com/keithhamilton/voiceunsilenced/tree/free-heroku)
-   branch, and follow the deploy instructions there.
+   [master branch](https://github.com/keithhamilton/voiceunsilenced/tree/master),
+   and follow the deploy instructions there.
 
 2. **Twilio.** Twilio isn't free, unless you are just doing testing, which you
    won't be with this bot. Calls are $0.015 each, which isn't bad, really. For
