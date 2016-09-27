@@ -3,7 +3,7 @@
     "description": "A Twitter bot that calls someone to read a tweet at them, using the user's name as identification.",
     "website": "http://voiceunsilenced.com",
     "repository": "https://github.com/keithhamilton/voiceunsilenced",
-    "logo": "https://github.com/keithhamilton/voiceunsilenced/MBP.jpg",
+    "logo": "https://github.com/keithhamilton/voiceunsilenced/vu.png",
     "keywords": [
         "twitter",
         "python",
