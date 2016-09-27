@@ -7,7 +7,7 @@ to that person.
 
 ##License
 This codebase is freely available to the public for **non-commercial** uses under a
-modified version of The Unlicense found [here](https://githhub.com/keithhamilton/voiceunsilenced/blob/master/LICENSE).
+modified version of The Unlicense found [here](https://github.com/keithhamilton/voiceunsilenced/blob/master/LICENSE).
 
 ## What is it?
 VoiceUnsilenced is a tool for political expression that leverages Twitter in
