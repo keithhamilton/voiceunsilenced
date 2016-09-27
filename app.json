@@ -10,104 +10,13 @@
         "flask",
         "activism"
     ],
-    "env": {
-        "BOT_APP_NAME": {
-            "description": "A copy of the app name to use for get requests to the web app portion. Use the same value as you did for the Heroku app name.",
-            "value": ""
-        },
-        "CONGRESS_NAMES": {
-            "description": "Comma-separated list of names of Congresspeople to call. Note: Order must match with CONGRESS_NUMBERS.",
-            "value": "Sen. Thom Tillis,Sen. Richard Burr,Rep. Alma Adams"
-        },
-        "CONGRESS_NUMBERS": {
-            "description": "Comma-separated list of numbers of Congresspeople listed in CONGRESS_NAMES. Note: Order must match with CONGRESS_NAMES.",
-            "value": "2022243154,2022246342,2022251510"
-        },
-        "ENV": {
-            "description": "Environment -- possible values: DEV, PROD",
-            "value": "DEV"
-        },
-        "TEST_NAME": {
-            "description": "Name of a test person to use in place of a Congressperson in dev mode.",
-            "value": "Rep. John Matrix"
-        },
-        "TEST_NUMBER": {
-            "description": "Number to call in place of Congressional phone number in dev mode",
-            "value": "1234567890"
-        },
-        "TWILIO_ACCOUNT_SID": {
-            "description": "Account SID for Twilio Account",
-            "value": ""
-        },
-        "TWILIO_AUTH_TOKEN": {
-            "description": "Auth token for Twilio Account",
-            "value": ""
-        },
-        "TWILIO_PHONE_NUMBERS": {
-            "description": "Comma-separated list of phone numbers with no punctuation, i.e., 5551234567",
-            "value": ""
-        },
-        "TWILIO_FROM_NAMES": {
-            "description": "Name of victim on whose behalf calls are made",
-            "value": "Keith Lamont Scott,"
-        },
-        "TWITTER_CONSUMER_KEY": {
-            "description": "Consumer key for the Twitter app that runs the bot",
-            "value": ""
-        },
-        "TWITTER_CONSUMER_SECRET": {
-            "description": "Consumer secret for the Twitter app that runs the bot",
-            "value": ""
-        },
-        "TWITTER_ACCESS_TOKEN": {
-            "description": "Access token for the Twitter app that runs this bot",
-            "value": ""
-        },
-        "TWITTER_ACCESS_SECRET": {
-            "description": "Access secret for the Twitter app that runs this bot",
-            "value": ""
-        },
-        "TWITTER_BOT_HANDLE": {
-            "description": "The @-handle for your bot",
-            "value": ""
-        },
-        "WAIT_TIME": {
-            "description": "The time to wait in-between calls made by the Twitter bot",
-            "value": "120"
-        }
-    },
     "formation": {
         "web": {
             "quantity": 1,
-            "size": "Hobby"
-        },
-        "worker": {
-            "quantity": 1,
-            "size": "Hobby"
-        },
-        "listener": {
-            "quantity": 1,
-            "size": "Hobby"
+            "size": "free"
         }
     },
     "image": "heroku/python",
-    "addons": [
-        {
-            "plan": "heroku-redis",
-            "options": {
-                "plan": "hobby"
-            }
-        },
-        {
-            "plan": "papertrail",
-            "options": {
-                "plan": "choklad"
-            }
-        }
-    ],
-    "scripts": {
-        "postdeploy": "sleep 180"
-    },
     "buildpacks": [
         {
             "url": "https://github.com/heroku/heroku-buildpack-python"
