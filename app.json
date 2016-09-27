@@ -77,17 +77,13 @@
         }
     },
     "formation": {
-        "web": {
-            "quantity": 1,
-            "size": "Hobby"
-        },
         "worker": {
             "quantity": 1,
-            "size": "Hobby"
+            "size": "free"
         },
         "listener": {
             "quantity": 1,
-            "size": "Hobby"
+            "size": "free"
         }
     },
     "image": "heroku/python",
