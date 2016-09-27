@@ -73,7 +73,7 @@ def reply(tweet):
 
     """
     Replies to the incoming tweet that was transformed into a phone call to
-    a Congressperson. If the tweet campe from the Twitter bot or the Twitter
+    a Congressperson. If the tweet came from the Twitter bot or the Twitter
     bot was @-mentioned in the tweet, return, so as to not create a loop.
 
     Args:
