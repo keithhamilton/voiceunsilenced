@@ -1,6 +1,5 @@
 # voiceunsilenced
-A Twitter bot that takes your tweets, calls someone, and reads them to that
-person.
+A Twitter bot that listens for your tweets, calls someone, and reads your tweets to that person.
 
 ##License
 This codebase is freely available to the public for **non-commercial** uses under a
