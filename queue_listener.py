@@ -52,6 +52,30 @@ class StreamListener(tweepy.StreamListener):
     for the on_status handler function.
     """
 
+    def clean_tweet(self, tweet):
+
+        """
+        Cleans up a tweet by removing the name of the bot and any message
+        fragments included in a retweet ('RT', 'https://...', original
+        poster's @-handle), so that each message is read as a message.
+        Finally, once the tweet is cleaned of junk, it is encoded using
+        utf-8 string encoding.
+        Args:
+            tweet (str): the original, raw tweet text
+        Returns:
+            str: the cleaned tweet
+        """
+
+        # filter replaces inserted RT and/or https link to original
+        # tweet if this is a retweet.
+        status_filter = re.compile(r'(RT\s?)|(http[s]?://.+[\s]?)')
+        user_filter = re.compile(r'(@[0-9a-zA-Z:]+\s)')
+        _tweet = re.sub(user_filter, '',
+                        re.sub(status_filter, '', tweet))
+
+        return _tweet.encode('utf-8').strip()
+    
+    
     def on_status(self, status):
 
         """
