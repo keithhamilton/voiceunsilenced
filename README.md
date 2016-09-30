@@ -2,7 +2,7 @@
 A Twitter bot that listens for your tweets, calls someone, and reads your tweets
 to that person.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/keithhamilton/voiceunsilenced)
 
 
 ##License
@@ -63,7 +63,7 @@ Hobby plan, which will cost about $20/month. This default was chosen so the bot
 would never go to sleep. If you would like to deploy this on Heroku's Free tier,
 switch to the [free-heroku](https://github.com/keithhamilton/voiceunsilenced/tree/free-heroku) branch and follow the deploy instructions there.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/keithhamilton/voiceunsilenced)
 
 
 ###3. Update the configuration values
